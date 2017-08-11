@@ -7,5 +7,5 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'pm-slackin' });
 });
 router.get('/socket',MessageController.index)
-router.get('/start-reply',MessageController.startReply)
+router.post('/start-reply',MessageController.startReply)
 module.exports = router;
