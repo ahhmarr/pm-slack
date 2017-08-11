@@ -1,5 +1,5 @@
 var slackWebhook = require('slack-webhook');
-var hook = new slackWebhook('https://hooks.slack.com/services/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', {
+var hook = new slackWebhook(process.env.IN_HOOK_URL, {
     defaults: {
         username: 'boty',
         channel: '#general',
