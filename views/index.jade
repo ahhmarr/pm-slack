@@ -2,4 +2,7 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  div
+    textarea(id="message" rows="25" cols="25")
+  div
+    button(id="send") Send
