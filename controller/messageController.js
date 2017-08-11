@@ -11,7 +11,8 @@ function index(req, res, next){
 		})
 	})
 }
-function startReply(){
+function startReply(req, res, next){
 	console.log('reply started.....');
+	res.send('called me')
 }
 module.exports={index,startReply}

@@ -4,7 +4,7 @@ var MessageController =require('../controller/messageController')
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
-  res.render('index', { title: 'pm-slackin' });
+  res.render('index', { title: process.env.IN_HOOK_URL });
 });
 router.get('/socket',MessageController.index)
 router.post('/start-reply',MessageController.startReply)
