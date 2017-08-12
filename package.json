@@ -13,7 +13,12 @@
     "express": "~4.15.2",
     "jade": "~1.11.0",
     "morgan": "~1.8.1",
+    "pg": "^7.1.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.4.3",
+    "sequelize-cli": "^2.8.0",
     "serve-favicon": "~2.4.2",
+    "slack": "^8.3.1",
     "slack-webhook": "^1.0.0",
     "socket.io": "^2.0.3"
   }
