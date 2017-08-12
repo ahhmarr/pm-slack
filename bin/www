@@ -24,9 +24,15 @@ var server = require('../app').server;
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(port);
-server.on('error', onError);
-server.on('listening', onListening);
+
+/**
+ * Event listener for HTTP server "listening" event.
+ */
+models.sequelize.sync().then(function() {
+    server.listen(port);
+    server.on('error', onError);
+    server.on('listening', onListening);
+});
 console.log(`
 ==========================================
 
@@ -82,14 +88,7 @@ function onError(error) {
     }
 }
 
-/**
- * Event listener for HTTP server "listening" event.
- */
-models.sequelize.sync().then(function() {
-    server.listen(port);
-    server.on('error', onError);
-    server.on('listening', onListening);
-});
+
 
 function onListening() {
     var addr = server.address();
