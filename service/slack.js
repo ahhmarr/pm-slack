@@ -11,9 +11,6 @@ function sendMessageToAChannel(args) {
     console.log('submitting....');
     hook.send({
         text: args.msg,
-        username: 'boty',
-        icon_emoji: ':robot_face:',
-        channel: '#random',
         "attachments": [{
             "text": "",
             "color": "#0ADA0A",
