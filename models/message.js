@@ -2,8 +2,8 @@
 module.exports = function(sequelize, DataTypes) {
   var Message = sequelize.define('Message', {
     message: DataTypes.TEXT,
-    origin_id: DataTypes.INTEGER,
-    parent_id: DataTypes.INTEGER
+    origin_id: DataTypes.STRING,
+    parent_id: DataTypes.STRING
   }, {
     classMethods: {
       associate: function(models) {

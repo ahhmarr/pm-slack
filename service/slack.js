@@ -17,15 +17,26 @@ function sendMessageToAChannel(args) {
             "callback_id":"reply_msg",
             "attachment_type": "default",
             "actions": [{
-                "name": "reply",
-                "text": "Reply",
+                "name": "resolve",
+                "text": "Resolve",
                 "style": "primary",
                 "type": "button",
-                "value": "war"
+                "value": args.id
+            },{
+                "name": "reject",
+                "text": "Reject",
+                "style": "danger",
+                "type": "button",
+                "value": args.id
             }]
         }]
+    }).then((resp)=>{
+        console.log(resp)
+        // console.log(resp.event.ts)
+    }).catch((err)=>{
+        console.log(err)
     })
-    console.log(args);
+    // console.log(args);
 }
 
 module.exports = {
